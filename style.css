@@ -1,0 +1,97 @@
+body{
+    font-family: sans-serif;
+}
+
+.container{
+    width: 70%;
+    height: 1000px;
+    margin: auto;
+    position: relative;
+}
+
+.product-container{
+    padding: 20px;
+    position: relative;
+    text-align: center;
+    height: 40%;
+}
+
+.product{
+    width: 30%;
+    position: relative;
+    display: inline-block;
+}
+
+img{
+    width: 100%;
+    padding-left: 5px;
+}
+
+.immagine-mouse{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: none;
+}
+
+.heart{
+    position: absolute;
+    top: 10px;
+    right: 0px;
+    background-color: white;
+    font-size: 20px;
+    padding: 5px 10px;
+}
+
+/* Prendo tutti gli span che non hanno questo determinato ID (ossia quello presente nei dettagli del prodotto)*/
+    span:not(#prezzo-precedente){
+    position: absolute;
+    bottom: 140px;
+    left: 5px;
+    color: white;
+    padding: 5px;
+}
+
+.percentuale-sconto{
+    background-color: #eb0037;
+}
+
+.sostenibilità{
+    left: 50px;
+    background-color: #028759;
+    margin-left: 50px;
+}
+
+/*Rimuovo il margin left precedente qualora sostenibilità fosse presente senza lo sconto*/
+.esclusiva{
+    margin-left: 0px;
+}
+
+.dettagli-prodotto{
+    padding-left: 5px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    height: 50px;
+}
+
+
+/*Rimuovo ogni distanziamento nella sezione dettagli, e allineo il testo a sinistra */
+.dettagli-prodotto h3, .dettagli-prodotto p{
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+
+#prezzo{
+    color: red;
+}
+
+#prezzo-precedente{
+    text-decoration: line-through;
+    color: black;
+}
+
+/*Quando passo il mouse, viene mostrato la seconda immagine con la classe apposita*/
+.product:hover .immagine-mouse{
+    display: inline-block;
+}
